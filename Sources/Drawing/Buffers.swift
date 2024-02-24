@@ -120,7 +120,7 @@ public class FrameBuffer {
     public init(width: Int, height: Int, color: Pixel = .clear) {
         self.width = width
         self.height = height
-        pixels = .init(repeating: .green, count: width * height)
+        pixels = .init(repeating: color, count: width * height)
     }
 
     /// clear the image buffer by setting each pixel to the specified color
