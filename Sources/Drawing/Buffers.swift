@@ -14,7 +14,7 @@ public typealias PlatformImage = UIImage
 #endif
 
 /// color values for a pixel
-public struct Pixel {
+public struct Pixel: Equatable {
     /// init color for pixel from alpha, red, green, blue
     /// - Parameters:
     ///   - a: alpha value 0-255
