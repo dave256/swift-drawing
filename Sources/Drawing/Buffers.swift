@@ -27,62 +27,6 @@ public struct Pixel: Equatable {
         self.g = g
         self.b = b
     }
-    
-    /// init from color enum
-    /// - Parameter color: color to enum for pixel
-    public init(color: Pixel.Color) {
-        switch color {
-
-        case .red:
-            self = .red
-        case .orange:
-            self = .orange
-        case .yellow:
-            self = .yellow
-        case .green:
-            self = .green
-        case .blue:
-            self = .blue
-        case .indigo:
-            self = .indigo
-        case .violet:
-            self = .violet
-        case .black:
-            self = .black
-        case .white:
-            self = .white
-        case .clear:
-            self = .clear
-        }
-    }
-    
-    /// some common colors to use
-    public enum Color: String, CaseIterable, Equatable {
-        case red
-        case orange
-        case yellow
-        case green
-        case blue
-        case indigo
-        case violet
-        case black
-        case white
-        case clear
-    }
-
-    // constants for each of these colors
-
-    public static var red: Pixel { Pixel(a: 255, r: 200, g: 0, b: 0) }
-    public static var orange: Pixel { Pixel(a: 255, r: 255, g: 165, b: 0) }
-    public static var yellow: Pixel { Pixel(a: 255, r: 255, g: 165, b: 0) }
-    public static var green: Pixel { Pixel(a: 255, r: 0, g: 200, b: 0) }
-    public static var blue: Pixel { Pixel(a: 255, r: 0, g: 0, b: 200) }
-    public static var indigo: Pixel { Pixel(a: 255, r: 75, g: 0, b: 130) }
-    public static var violet: Pixel { Pixel(a: 255, r: 160, g: 32, b: 240) }
-    public static var black: Pixel { Pixel(a: 255, r: 0, g: 0, b: 0) }
-    public static var white: Pixel { Pixel(a: 255, r: 255, g: 255, b: 255) }
-    public static var clear: Pixel { Pixel(a: 0, r: 0, g: 0, b: 0)
-    }
 
     /// alpha 0-255
     var a: UInt8
@@ -92,6 +36,20 @@ public struct Pixel: Equatable {
     var g: UInt8
     /// blue 0-255
     var b: UInt8
+}
+
+extension Pixel {
+    // come common colors
+    public static var red: Pixel { Pixel(a: 255, r: 200, g: 0, b: 0) }
+    public static var orange: Pixel { Pixel(a: 255, r: 255, g: 165, b: 0) }
+    public static var yellow: Pixel { Pixel(a: 255, r: 255, g: 165, b: 0) }
+    public static var green: Pixel { Pixel(a: 255, r: 0, g: 200, b: 0) }
+    public static var blue: Pixel { Pixel(a: 255, r: 0, g: 0, b: 200) }
+    public static var indigo: Pixel { Pixel(a: 255, r: 75, g: 0, b: 130) }
+    public static var violet: Pixel { Pixel(a: 255, r: 160, g: 32, b: 240) }
+    public static var black: Pixel { Pixel(a: 255, r: 0, g: 0, b: 0) }
+    public static var white: Pixel { Pixel(a: 255, r: 255, g: 255, b: 255) }
+    public static var clear: Pixel { Pixel(a: 0, r: 0, g: 0, b: 0) }
 }
 
 /// FrameBuffer for creating an image from individual pixels
