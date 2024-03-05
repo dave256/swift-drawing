@@ -42,7 +42,7 @@ extension Pixel {
     // come common colors
     public static var red: Pixel { Pixel(a: 255, r: 200, g: 0, b: 0) }
     public static var orange: Pixel { Pixel(a: 255, r: 255, g: 165, b: 0) }
-    public static var yellow: Pixel { Pixel(a: 255, r: 255, g: 165, b: 0) }
+    public static var yellow: Pixel { Pixel(a: 255, r: 255, g: 0, b: 0) }
     public static var green: Pixel { Pixel(a: 255, r: 0, g: 200, b: 0) }
     public static var blue: Pixel { Pixel(a: 255, r: 0, g: 0, b: 200) }
     public static var indigo: Pixel { Pixel(a: 255, r: 75, g: 0, b: 130) }
